@@ -18,9 +18,9 @@ jobs:
         run: echo "isNumber=5"
 
       - name: check number
-        if: steps.number_set.outputs.isNumber=5
+        if: steps.number_set.outputs.isNumber == '5'
         run: echo "Number is 5"
 
       - name: check number
-        if: steps.number_set.outputs.isNumber !=5
+        if: steps.number_set.outputs.isNumber != '5'
         run: echo "Number is not 5"
