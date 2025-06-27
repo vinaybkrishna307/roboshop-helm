@@ -11,16 +11,11 @@ jobs:
 
     steps:
       - name: Check repos
-        run: echo "${{ github.repository }}"
+        if: github.repository == 'vinaybkrishna307/roboshop-helm'
+        run: echo "correct repo"
 
-      - name: set number
-        id: number_set
-        run: echo "isNumber=5" >> $GITHUB_OUTPUT
-
-      - name: check number
-        if: steps.number_set.outputs.isNumber == '5'
-        run: echo "Number is 5"
-
-      - name: check number
-        if: steps.number_set.outputs.isNumber != '5'
-        run: echo "Number is not 5"
+    build-test-deploy:
+      runs-on: ubuntu-latest
+      steps:
+        - name: all text
+          run: echo "all text"
