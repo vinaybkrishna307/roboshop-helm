@@ -11,7 +11,16 @@ jobs:
 
     steps:
       - name: Check repos
-        run: echo "$github.repository"
+        run: echo "${{ github.repository }}"
 
-      - name: Check steps
-        run: echo "$steps"
+      - name: set number
+        id: number_set
+        run: echo "isNumber=5"
+
+      - name: check number
+        if: steps.number_set.outputs.isNumber=5
+        run: echo "Number is 5"
+
+      - name: check number
+        if: !,steps.number_set.outputs.isNumber=5
+        run: echo "Number is not 5"
