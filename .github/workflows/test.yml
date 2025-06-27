@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      - name: Check repos
+        run: echo "$github.repository"
 
-        run: echo "helo workd"
+      - name: Check steps
+        run: echo "$steps"
