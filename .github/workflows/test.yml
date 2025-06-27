@@ -15,7 +15,7 @@ jobs:
 
       - name: set number
         id: number_set
-        run: isNumber=5 >> $GITHUB_OUTPUT
+        run: echo "isNumber=5" >> $GITHUB_OUTPUT
 
       - name: check number
         if: steps.number_set.outputs.isNumber == '5'
