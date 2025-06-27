@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Check repos
-        if: github.repository == 'vinaybkrishna307/roboshop-helm'
+        if: github.repository == 'vinaybkrishna307/robosho'
         run: echo "correct repo"
 
   all-test:
