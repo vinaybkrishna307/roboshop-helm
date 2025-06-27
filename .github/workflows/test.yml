@@ -14,8 +14,8 @@ jobs:
         if: github.repository == 'vinaybkrishna307/roboshop-helm'
         run: echo "correct repo"
 
-    build-test-deploy:
-      runs-on: ubuntu-latest
-      steps:
-        - name: all text
-          run: echo "all text"
+  all-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: all text
+        run: echo "all text"
