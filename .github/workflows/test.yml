@@ -8,12 +8,10 @@ on:
 jobs:
   build-test-deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Check repos
         if: github.repository == 'vinaybkrishna307/robosho'
         run: echo "correct repo"
-
   all-test:
     runs-on: ubuntu-latest
     steps:
